@@ -19,7 +19,7 @@ const Products = () => {
     return (
         <div className="productsWrapper">
             {products.map((product) => (
-                <div class="flex">
+                <div class="flex justify-center">
                     <div class="max-w-xs rounded-lg bg-white shadow-lg">
                         <img class="rounded-t-lg" src={product.image} alt="" />
                         <div class="p-6 border border-black">
