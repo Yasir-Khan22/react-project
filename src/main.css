@@ -4,24 +4,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-        'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-        'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    padding: 20px;
-    background: whitesmoke;
-}
-
-img {
-    height: 80px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .card {
+    border: 1px solid black;
+    box-shadow: 10px 10px 10px 10px rgb(0 0 0 / 0.25);
     background: white;
     padding: 20px;
     text-align: center;
@@ -29,49 +17,8 @@ img {
 }
 
 .productsWrapper {
+    margin-top: 3rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
-}
-
-.btn {
-    border: none;
-    outline: none;
-    background: #764abc;
-    padding: 5px 10px;
-    color: #fff;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-.btn:hover {
-    background: #513282;
-}
-
-.heading {
-    padding: 25px 0;
-}
-
-.cartCount {
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-left: 40px;
-}
-
-.navLink {
-    text-decoration: none;
-    color: black;
-    margin-left: 20px;
-}
-
-.cartCard {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #fff;
-    margin-bottom: 20px;
-    padding: 14px;
-    border-radius: 5px;
 }
