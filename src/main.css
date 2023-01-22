@@ -7,7 +7,8 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.card {
+.card,
+.cart__card {
     border: 1px solid rgb(29 78 216);
     box-shadow: 10px 10px 10px 10px rgb(0 0 0 / 0.25);
     background: white;
@@ -16,7 +17,8 @@
     border-radius: 10px;
 }
 
-.productsWrapper {
+.productsWrapper,
+.cartCard__wrapper {
     margin-top: 3rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
