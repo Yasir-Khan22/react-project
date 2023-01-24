@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useFetcher } from "react-router-dom";
 import { add } from "../store/cartSlice"
 import { fetchAPI } from "../store/productSlice";
+import { STATUSES } from "../store/productSlice";
 
 const Products = () => {
     const dispatch = useDispatch();
@@ -23,6 +24,10 @@ const Products = () => {
 
     const handleAdd = (product) => {
         dispatch(add(product))
+    }
+
+    if (status === STATUSES.LOADING) {
+        return <h2 className="text-center text-4xl mt-[2rem]">Loading...</h2>
     }
 
     return (
