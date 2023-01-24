@@ -21,7 +21,6 @@ const Products = () => {
         // fetchProduct()
     }, [])
 
-
     const handleAdd = (product) => {
         dispatch(add(product))
     }
@@ -30,6 +29,9 @@ const Products = () => {
         return <h2 className="text-center text-4xl mt-[2rem]">Loading...</h2>
     }
 
+    if (status === STATUSES.ERROR) {
+        return <h1 className="text-center text-4xl mt-[2rem]"> Error occured while parsing.</h1>
+    }
     return (
         <div className="productsWrapper">
             {products.map((product) => (
