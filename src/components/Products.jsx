@@ -3,11 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { useFetcher } from "react-router-dom";
 import { add } from "../store/cartSlice"
 import { fetchAPI } from "../store/productSlice";
-import { STATUSES } from "../store/productSlice";
 
 const Products = () => {
-    const dispatch = useDispatch();
 
+    const dispatch = useDispatch();
     const { data: products, status } = useSelector((state) => state.product)
 
     useEffect(() => {
@@ -25,13 +24,6 @@ const Products = () => {
         dispatch(add(product))
     }
 
-    if (status === STATUSES.LOADING) {
-        return <h2 className="text-center text-4xl mt-[2rem]">Loading...</h2>
-    }
-
-    if (status === STATUSES.ERROR) {
-        return <h1 className="text-center text-4xl mt-[2rem]"> Error occured while parsing.</h1>
-    }
     return (
         <div className="productsWrapper">
             {products.map((product) => (
